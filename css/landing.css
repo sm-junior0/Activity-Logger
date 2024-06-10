@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #4c44b6;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4c44b6;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid #4c44b6;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #4c44b6;
+    color: #fff;
+}
+
+main .intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main .intro h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+main .intro p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+main .intro .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #4c44b6;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+main .intro .cta:hover {
+    background-color: #3b349e;
+}
+
+
+main .features h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+main .features .feature {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main .features .feature h3 {
+    font-size: 20px;
+    color: #4c44b6;
+}
+
+main .features .feature p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu {
+    width: 100%;
+    background: #fff;
+    padding: 4px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu .container {
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #854d9b; 
+}
+
+.logo span:first-child {
+    font-weight: bold;
+    color: #6C3483; 
+}
+
+.logo span:last-child {
+    font-weight: normal;
+    color: #333; 
+    margin-left: -8px; 
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-item:hover a {
+    color: var(--clr-primary);
+    transition: 0.3s linear;
+}
+
+.nav-item:last-of-type {
+    margin-right: 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-radius: 5px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    main .intro p, main .features .feature p {
+        max-width: 100%;
+    }
+
+    .menu .nav,
+    .menu .btn {
+        display: none;
+    }
+
+    .menu.active .nav,
+    .menu.active .btn {
+        display: block;
+    }
+
+    .menu.active {
+        padding: 30px 0;
+        width: 100%;
+        transition: all 0.8s ease;
+    }
+}
